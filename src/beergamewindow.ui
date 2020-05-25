@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BeerGameWindow</class>
+ <widget class="QMainWindow" name="BeerGameWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Ubuntu</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255)</string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>901</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>300</y>
+        <width>251</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+    font: bold;
+    border: 2px solid silver;
+    border-radius: 8px;
+    margin-top: 6px;
+    padding: 20px 5px 10px 5px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}</string>
+      </property>
+      <property name="title">
+       <string>Sign In</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>User Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_useremail">
+           <property name="maxLength">
+            <number>32751</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Password </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_password"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_isInstructor">
+         <property name="text">
+          <string>Instructor</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Login">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;
+}
+
+#pushButton_Login:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="youtube_logo">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="youtube_btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(171,46,38, 255), stop:1 rgba(239,72,42,255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width:9.5em;
+    padding: 6px;
+	color: white;
+}
+
+#youtube_btn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(239,72,42,255), stop:1 rgba(171,46,38, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    padding: 6px;
+	color: white;}</string>
+           </property>
+           <property name="text">
+            <string>Quick Demo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>200</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>23</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Beer Game</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_cover">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-10</y>
+        <width>521</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_logo">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>10</y>
+        <width>161</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>250</y>
+        <width>241</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Your Solution To Beer Supply Chain </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="styleSheet">
+      <string notr="true">#page_2 {
+background-color: rgb(28, 28, 30);
+}</string>
+     </property>
+     <widget class="QFrame" name="verticalFrame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>881</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#verticalFrame {
+background-color: rgb(28, 28, 30);
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QWidget" name="video" native="true">
+         <property name="styleSheet">
+          <string notr="true">#video {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(28, 28, 30);
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="go_back">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-radius: 10px;
+    font: bold 14px;
+    max-width: 15em;
+    padding: 6px;
+	margin-bottom:4px;
+	margin-left:320px;
+	color: white;
+}
+
+#go_back:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-radius: 10px;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}</string>
+         </property>
+         <property name="text">
+          <string>Go Back</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

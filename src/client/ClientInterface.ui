@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientInterface</class>
+ <widget class="QWidget" name="ClientInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>695</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#PlayerWindow{
+}</string>
+  </property>
+  <widget class="QLabel" name="welcome">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Welcome</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>201</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    font: bold;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 10px 5px 10px 5px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_user">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>120</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Player Id : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player_pId">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>180</y>
+      <width>41</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player_email">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>171</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>player@beergame.de</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>161</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Join Game</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="current_game">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>See Current Game</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stat_btn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Game Statistics </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exit_game">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(240,70,80);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 16px;
+    min-width: 6em;
+    padding: 6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>461</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>429</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font: bold;
+	font-size:18px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(250, 250, 250);
+}
+
+
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+
+QPushButton {
+	color: white;
+    border-width: 2px;
+    border-color: beige;
+}
+
+</string>
+     </property>
+     <property name="title">
+      <string>Join Game</string>
+     </property>
+     <widget class="QWidget" name="join_game" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>391</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    border-width: 5px;
+    border-radius: 4px;
+	background-color: rgb(242, 242, 242);
+	selection-color: white;
+	selection-background-color:rgba(76, 92, 171, 255);
+    font: bold 16px;
+    padding: 2px;
+	color: black;
+}
+
+QLineEdit:hover {
+background-color:rgb(216,227,252) ; 
+    border-radius: 4px;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_JoinGameId">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Game Id </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_gameId">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="maxLength">
+          <number>32751</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Connect">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#Connect{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 4em;
+    padding: 6px;
+	color: white;
+}
+
+#Connect:hover{
+    background-color: rgb(67,102,48);
+}
+
+#Connect:disabled{
+    background-color: grey;
+}</string>
+         </property>
+         <property name="text">
+          <string>Connect</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QStackedWidget" name="connection_setup">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>391</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	background-color: none;
+}
+
+QLineEdit{
+    border-width: 5px;
+    border-radius: 4px;
+	background-color: rgb(242, 242, 242);
+	selection-color: white;
+	selection-background-color:rgba(76, 92, 171, 255);
+    font: bold 16px;
+    padding-right: 8px;
+    padding-left: 8px;
+	color: black;
+}
+
+QLineEdit:hover {
+background-color:rgb(216,227,252) ; 
+    border-radius: 4px;
+}
+
+QLineEdit#ip_input[error=&quot;true&quot;]
+{
+color: red;
+}
+
+QLineEdit#port_input[error=&quot;true&quot;]
+{
+color: red;
+}
+
+QLineEdit#ip_input[success=&quot;true&quot;]
+{
+	background-color: rgb(228,228,228);
+	color: green;
+}
+
+QLineEdit#port_input[success=&quot;true&quot;]
+{
+	background-color: rgb(228,228,228);
+	color: green;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="connection_status">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>310</y>
+          <width>211</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Your connection status :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="port_input">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>90</y>
+          <width>61</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>8880</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ip_label">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>60</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>League Spartan Bold</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#ip_label { 
+	color: #111;
+	font-family: 'League Spartan Bold', arial;
+}
+
+#ip_label:disabled {
+	color: #c0c0c0;
+}</string>
+        </property>
+        <property name="text">
+         <string>IP Address</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="port_label">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>60</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>League Spartan Bold</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#port_label{ 
+	color: #111;
+	font-family: 'League Spartan Bold', arial;
+}
+
+#port_label:disabled {
+	color: #c0c0c0;
+}</string>
+        </property>
+        <property name="text">
+         <string>Port</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ip_input">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>90</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>127.0.0.1</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="connection_status_logo">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>150</y>
+          <width>201</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="default_settings_label">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>10</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>League Spartan Bold</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#default_settings_label { 
+	color: #111;
+	font-family: 'League Spartan Bold', arial;
+	font:bold;
+font-size:14;
+}
+
+#default_settings_label:disabled {
+	color: #c0c0c0;
+}</string>
+        </property>
+        <property name="text">
+         <string>Default Settings</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="connection_label">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>310</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Not Connected</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="select_role">
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>0</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Select Role</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>321</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QFrame" name="d_container">
+           <layout class="QVBoxLayout" name="distributor_box">
+            <item>
+             <widget class="QLabel" name="label_distributor">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="distributor_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: rgb(207,163,43);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 6px;
+color: white;
+}
+
+#distributor_btn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}
+</string>
+              </property>
+              <property name="text">
+               <string>Distributor</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="f_container">
+           <layout class="QVBoxLayout" name="factory_box">
+            <item>
+             <widget class="QLabel" name="label_factory">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="factory_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: rgb(240,70,80);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 6px;
+color: white;
+}
+
+#factory_btn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}
+</string>
+              </property>
+              <property name="text">
+               <string>Factory</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>321</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QFrame" name="r_container">
+           <layout class="QVBoxLayout" name="retailer_box">
+            <item>
+             <widget class="QLabel" name="label_retailer">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="retailer_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: rgb(67,102,48);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 6px;
+	color: white;
+}
+#retailer_btn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}
+</string>
+              </property>
+              <property name="text">
+               <string>Retailer</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="w_container">
+           <layout class="QVBoxLayout" name="wholesaler_box">
+            <item>
+             <widget class="QLabel" name="label_wholesaler">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="wholesaler_btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: rgb(55,69,156);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 6px;
+color: white;
+}
+
+#wholesaler_btn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}
+</string>
+              </property>
+              <property name="text">
+               <string>Wholesaler</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <zorder>connection_setup</zorder>
+     <zorder>join_game</zorder>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="game_mode">
+    <widget class="QGroupBox" name="PlayerArea">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>451</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(245, 245, 245);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+QLabel{
+	background-color: none;
+}</string>
+     </property>
+     <property name="title">
+      <string>Player</string>
+     </property>
+     <widget class="QPushButton" name="orderBtn">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>120</y>
+        <width>142</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#orderBtn {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 18px;
+    min-width: 6em;
+    padding: 6px;
+	color: white;
+}
+
+#orderBtn:hover { 
+background-color: rgba(76, 92, 171, 255); 
+color: white; 
+border: 2px solid rgba(66, 163, 167, 255);}
+
+
+#orderBtn:disabled {
+	background-color: #add8e6;
+	color: black;
+}</string>
+      </property>
+      <property name="text">
+       <string> Order</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="orderIn">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#orderIn{
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: beige;
+    font: bold 18px;
+    padding: 2px;
+	color: black;
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalCost_l">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>340</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Total Cost:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weekCost_l">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Week's Cost:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="incomingorder">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>70</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>NA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="outgoing_4">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Incoming Order:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weekcost">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>340</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalcost">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>340</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalCost_l_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Game Week:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="week">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>20</y>
+        <width>21</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="StatBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>411</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	background-color: none;
+}</string>
+      </property>
+      <property name="title">
+       <string>Player Statistics</string>
+      </property>
+      <widget class="QLabel" name="incomingshipment">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>120</y>
+         <width>39</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	background-color: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>NA</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="incoming_2">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>120</y>
+         <width>123</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	background-color: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Incoming Beers:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="outgoingshipment">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>120</y>
+         <width>37</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>NA</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="outgoing_2">
+       <property name="geometry">
+        <rect>
+         <x>228</x>
+         <y>120</y>
+         <width>126</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>Outgoing Beers:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="inventoryafter">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>40</y>
+         <width>95</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#inventoryafter{
+	background-color:green;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: beige;
+    font: bold 16px;
+	max-width: 5em;
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="inventory_2">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>40</y>
+         <width>135</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	background-color: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>Inventory</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="inventory">
+       <property name="geometry">
+        <rect>
+         <x>169</x>
+         <y>40</y>
+         <width>95</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#inventory{
+	background-color:red;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: beige;
+    font: bold 16px;
+	max-width: 5em;
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="backlogafter">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>70</y>
+         <width>95</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#backlogafter{
+	background-color:green;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: beige;
+    font: bold 16px;
+	max-width: 5em;
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="backLog_2">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>70</y>
+         <width>135</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	background-color: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>BackLog</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="backlog">
+       <property name="geometry">
+        <rect>
+         <x>169</x>
+         <y>70</y>
+         <width>95</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#backlog{
+	background-color:red;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: beige;
+    font: bold 16px;
+	max-width: 5em;
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="stat">
+    <widget class="QGroupBox" name="statgroup">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>451</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(245, 245, 245);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+QLabel{
+	background-color: none;
+}
+
+QCheckBox {
+  background-color: none;
+  color: black;
+  spacing: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Player Statistics</string>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>431</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="stat_widget"/>
+     </widget>
+     <widget class="QCheckBox" name="linegraph_check">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable Line Graph</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="show_incoming">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>360</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Show Incoming</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="show_outgoing">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>390</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Outgoing</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="proceed">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>460</y>
+     <width>101</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#proceed{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 4em;
+    padding: 6px;
+	color: white;
+}
+
+#proceed:hover{
+    background-color: rgb(67,102,48);
+}</string>
+   </property>
+   <property name="text">
+    <string>Proceed</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InstructorWindow</class>
+ <widget class="QDialog" name="InstructorWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Instructor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>241</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(250, 250, 250);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+QLabel{
+	background-color: none;
+}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_user">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>240</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Instructor Id : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="instructor_id">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="instructor_email">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>201</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>test@jacobs-univeristy.de</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="verticalFrame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>191</width>
+      <height>177</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+    font: bold;
+	font-size:16px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(250, 250, 250);
+}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="home_screen">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Home Screen</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>User Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>Game Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ins_exitbtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(240,70,80);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 16px;
+    min-width: 5em;
+    padding: 6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="welcome">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>30</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Welcome</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>491</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>401</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(250, 250, 250);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+QLabel{
+	background-color: none;
+}
+
+QLineEdit{
+    border-width: 5px;
+    border-radius: 4px;
+	background-color: rgb(240, 240, 240);
+	selection-color: white;
+	selection-background-color:rgba(76, 92, 171, 255);
+    font: bold 16px;
+    padding: 2px;
+	color: rgba(46, 52, 121, 255);
+}</string>
+     </property>
+     <property name="title">
+      <string>Game Settings</string>
+     </property>
+     <widget class="QLineEdit" name="orderDelayIn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>250</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Factory Delay:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>170</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Total Game Weeks:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>250</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order Delay:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Starting Inventory:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>50</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Holding Cost:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Backlog Cost:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="factoryDelayIn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>130</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="backlogCostIn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>90</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="startInventoryIn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>210</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>12</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nWeeksIn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>170</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>26</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="holdingCostIn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.5</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="botCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>310</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox{
+	background-color:none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Show Consumer</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="startBtn">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>390</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 6em;
+    padding: 6px;
+	color: white;
+}
+
+#startBtn:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}</string>
+     </property>
+     <property name="text">
+      <string>Create Local Game</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="go_online">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>390</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(66, 163, 167, 255), stop:1 rgba(76, 92, 171, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 6em;
+    padding: 6px;
+	color: white;
+}
+
+#go_online:hover{ 
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 10em;
+    padding: 6px;
+	color: white;}</string>
+     </property>
+     <property name="text">
+      <string>Go Online</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QGroupBox" name="server_settings">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>401</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font: bold;
+	font-size:16px;
+    border: 1px solid silver;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 15px 5px 10px 5px;
+background-color: rgb(250, 250, 250);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+QLabel{
+	background-color: none;
+}
+
+
+QLineEdit{
+    border-width: 5px;
+    border-radius: 4px;
+	background-color: rgb(242, 242, 242);
+	selection-color: white;
+	selection-background-color:rgba(76, 92, 171, 255);
+    font: bold 16px;
+    padding: 2px;
+	color: black;
+}</string>
+     </property>
+     <property name="title">
+      <string>Server Settings</string>
+     </property>
+     <widget class="QLabel" name="ip_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>League Spartan Bold</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#ip_label { 
+	color: #111;
+	font-family: 'League Spartan Bold', arial;
+}
+
+#ip_label:disabled {
+	color: #c0c0c0;
+}</string>
+      </property>
+      <property name="text">
+       <string>IP Address</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ip_input">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#ip_input:disabled {
+	background-color: rgb(238,238,238);
+	color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>127.0.0.1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="port_label">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>League Spartan Bold</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#port_label{ 
+	color: #111;
+	font-family: 'League Spartan Bold', arial;
+}
+
+#port_label:disabled {
+	color: #c0c0c0;
+}</string>
+      </property>
+      <property name="text">
+       <string>Port</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="port_input">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#port_input:disabled {
+	background-color: rgb(238,238,238);
+	color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>8880</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalWidget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>281</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QFrame" name="r_container">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="retailer_box">
+          <item>
+           <widget class="QLabel" name="label_retailer">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="retailer_btn">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(67,102,48);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 3px;
+	color: white;
+}
+#retailer_btn:disabled{ 
+    background-color: grey;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Retailer</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="w_container">
+         <layout class="QVBoxLayout" name="wholesaler_box">
+          <item>
+           <widget class="QLabel" name="label_wholesaler">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="wholesaler_btn">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(55,69,156);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 3px;
+color: white;
+}
+
+#wholesaler_btn:disabled{ 
+    background-color: grey;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Wholesaler</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalWidget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>250</y>
+        <width>281</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QFrame" name="d_container">
+         <layout class="QVBoxLayout" name="distributor_box">
+          <item>
+           <widget class="QLabel" name="label_distributor">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="distributor_btn">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(207,163,43);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 3px;
+color: white;
+}
+
+#distributor_btn:disabled{ 
+    background-color: grey;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Distributor</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="f_container">
+         <layout class="QVBoxLayout" name="factory_box">
+          <item>
+           <widget class="QLabel" name="label_factory">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="factory_btn">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(240,70,80);
+    border-style: outset;
+    border-radius: 10px;
+    font: bold 12px;
+    padding: 3px;
+color: white;
+}
+
+#factory_btn:disabled{ 
+    background-color: grey;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Factory</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Connected Player Roles </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="stop_server_btn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>420</y>
+       <width>169</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>League Spartan Bold</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#stop_server_btn {
+
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 9em;
+    padding: 6px;
+	color: white;
+}
+#stop_server_btn:hover { 
+        color:#ffcc4e;	
+        background-color: rgb(239, 41, 41);	
+
+}
+
+#stop_server_btn:disabled {
+	background-color: #c0c0c0;
+}</string>
+     </property>
+     <property name="text">
+      <string>Stop Server</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_server_btn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>420</y>
+       <width>169</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>League Spartan Bold</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#start_server_btn {
+    background-color: rgb(106,208,116);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.005, x2:1, y2:1, stop:0 rgba(76, 92, 171, 255), stop:1 rgba(66, 163, 167, 255));
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 15px;
+    min-width: 9em;
+    padding: 6px;
+	color: white;
+}
+
+#start_server_btn:hover { 
+	background-color: #66c011; 
+	color: black;
+}
+
+#start_server_btn:disabled { 
+	background-color: #c0c0c0;
+}</string>
+     </property>
+     <property name="text">
+      <string>Start Server</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <zorder>stackedWidget</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>welcome</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

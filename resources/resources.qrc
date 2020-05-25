@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/background.png</file>
+        <file>images/background-login-1.png</file>
+        <file>images/beer_server.jpg</file>
+        <file>images/beergame.png</file>
+        <file>images/beer-game.gif</file>
+        <file>images/user.png</file>
+        <file>images/retailer.png</file>
+        <file>images/wholesaler.png</file>
+        <file>images/distributor.png</file>
+        <file>images/factory.png</file>
+        <file>images/youtube.png</file>
+        <file>images/html/index.html</file>
+        <file>images/connected.gif</file>
+        <file>images/not-connected.gif</file>
+        <file>images/beer-icon.png</file>
+    </qresource>
+</RCC>

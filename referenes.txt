@@ -1,0 +1,36 @@
+{
+	"online-references": [{
+			"Title": "Qt Tutorials For Beginners 10 - Simple Login app using QT",
+			"Link": "https://www.youtube.com/watch?v=6_elY8O20I8",
+			"Description": "Help with creating log in screens"
+		},
+
+		{
+			"Title": "CMake Documentation",
+			"Link": "https://cmake.org/documentation/",
+			"Description": "CMake"
+		},
+
+		{
+			"Title": "GTest Documentation",
+			"Link": "https://github.com/google/googletest/blob/master/googletest/docs/primer.md",
+			"Description": "GTest"
+		},
+
+		{
+			"Title": "Doxygen Documentation",
+			"Link": "http://www.doxygen.nl/",
+			"Description": "Doxygen"
+		}
+		{
+			"Title": "Setting image in QT widget",
+			"Link": "https://doc.qt.io/qt-5/qtwidgets-widgets-imageviewer-example.html",
+			"Description": "QT"
+		}
+		{
+			"Title": "Doxygen Documentation",
+			"Link": "https://stackoverflow.com/questions/15975262/how-to-specify-image-size-in-html-doxygen",
+			"Description": "Doxygen"
+		}
+	]
+}
